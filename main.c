@@ -1,20 +1,22 @@
 // main.c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include <sys/stat.h>
+#include <stdio.h> // functions for input and output and file handling
+#include <stdlib.h> // functions for memory management, process control and conversions
+#include <string.h> // functions for manipulating strings
+#include <unistd.h> // functions to access the POSIX OS APIs like file descriptor operations and process control
+#include <fcntl.h> // functions and macros for file controls like opening and reading
+#include <netinet/in.h> // structs and functions for internet operations such as struct sockaddr_in and htons()
+#include <sys/socket.h> // socket related functions and definitions socket(), bind(), listen(), accept()
+#include <sys/stat.h> // functions and structure for file status information like metadata, size, permission
 
+// macros to use throughout the code 
 #define PORT 8080
 #define BUFFER_SIZE 4096
 #define WEBROOT "./www"
 
+// this handle_client function process and respond to incoming client requests in the HTTP server
 void handle_client(int client_fd) {
-    char buffer[BUFFER_SIZE];
-    read(client_fd, buffer, sizeof(buffer) - 1);
+    char buffer[BUFFER_SIZE]; // array of characters of size 4096
+    read(client_fd, buffer, sizeof(buffer) - 1); // reads data from the client socket(client_fd) into the buffer array, only stores data till 4095 bytes as it leaves 1 byte for null terminator(\0) 
 
     // Simple GET parser
     char method[8], path[1024];
