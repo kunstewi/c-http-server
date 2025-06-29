@@ -27,5 +27,15 @@ To run this http server locally
 ***Execute the binary***   
 
    ```bash
-   ./main.c
+   ./http_server
+   ```
+
+You will see listening on port 8080.
+
+go to port 8080 to see the html page inside the www folder that is rendered via the http server.
+
+if you want to clean the binary run -
+
+   ```bash
+   make clean
    ```
