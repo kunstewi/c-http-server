@@ -30,11 +30,11 @@ To run this http server locally
    ./http_server
    ```
 
-You will see listening on port 8080.
+You will see "listening on port 8080" on the terminal.
 
-go to port 8080 to see the html page inside the www folder that is rendered via the http server.
+go to port 8080 to see the html page that is rendered via the http server from the www folder index.html.
 
-if you want to clean the binary run -
+if you want to delete the binary run -
 
    ```bash
    make clean
