@@ -22,6 +22,6 @@ To run this http server locally
 
 ***Execute the binary***   
 
-```bash
+   ```bash
    ./main.c
    ```
