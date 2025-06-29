@@ -14,6 +14,10 @@ To run this http server locally
 
 ***Go into the directory fo c-http-server***
 
+   ```bash
+   cd c-http-server
+   ```
+
 ***Run make to create the binary of main.c***
 
    ```bash
